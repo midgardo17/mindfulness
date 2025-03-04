@@ -1,4 +1,3 @@
-/* Estilos Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -6,420 +5,174 @@
 }
 
 body {
-    font-family: 'Lato', 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
     color: #333;
     background-color: #FFFFFF;
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container para centralizar conteúdo */
-.container {
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 0 25px;
+/* Cabeçalho Fixo com Cronômetro */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #87CEEB;
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.timer {
+    font-weight: bold;
 }
 
 /* Seção Hero */
 .hero {
-    background: linear-gradient(180deg, #87CEEB, #F5F5F5);
     padding: 5rem 0;
     text-align: center;
+    background: linear-gradient(180deg, #87CEEB, #F5F5F5);
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .hero-content {
-    max-width: 750px;
+    max-width: 950px;
     margin: 0 auto;
-    padding: 2rem 0;
-    position: relative;
-    z-index: 2;
 }
 
 .logo {
-    display: block;
-    margin: 4rem auto 1.5rem;
-    width: 160px;
-    height: auto;
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out, scale 0.6s ease-out;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-    animation: fadeInSlide 1s ease-out;
+    width: 200px;
+    margin-bottom: 2rem;
 }
 
-.logo:hover {
-    transform: scale(1.08) rotate(2deg);
-    opacity: 0.95;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-}
-
-.hero h1.animated-title {
-    font-family: 'Playfair Display', 'Arial', serif;
-    font-size: 3.2rem;
+h1.animated-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
     color: #FFFFFF;
-    margin-bottom: 1.8rem;
-    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    animation: fadeInSlideRotate 1.5s ease-out;
+    animation: fadeInSlide 2s ease-out;
 }
 
-.hero p.animated-subtitle {
-    font-size: 1.5rem;
+p.animated-subtitle {
+    font-size: 1.4rem;
     color: #FFFFFF;
-    margin-bottom: 3.5rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    animation: fadeInSlideScale 1.5s ease-out 0.5s backwards;
-}
-
-#price, #timer {
-    font-weight: bold;
-    color: #FFA07A;
-    text-shadow: 0 2px 4px rgba(255, 160, 122, 0.3);
-    animation: pulsePrice 2s ease-in-out infinite;
+    margin-bottom: 2rem;
+    animation: fadeInSlide 2s ease-out 0.5s backwards;
 }
 
 .ebook-cover {
     max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    margin-bottom: 3.5rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    object-fit: cover;
-    transition: transform 0.6s ease-out, box-shadow 0.6s ease-out, opacity 0.6s ease-out;
-    animation: fadeInZoom 1s ease-out;
-}
-
-.ebook-cover:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-    opacity: 0.98;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Seções Gerais */
-.about-ebook, .benefits, .price, .payment-pix {
+.about-ebook, .benefits, .price {
     padding: 5rem 0;
     text-align: center;
     background: linear-gradient(135deg, #F5F5F5, #FFFFFF);
-    position: relative;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 h2.animated-title {
-    font-family: 'Playfair Display', 'Arial', serif;
-    font-size: 2.6rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
     color: #87CEEB;
-    margin-bottom: 2.2rem;
-    text-shadow: 0 2px 5px rgba(0, 123, 255, 0.15);
-    animation: fadeInSlide 1s ease-out;
+    margin-bottom: 2rem;
+    animation: fadeInSlide 2s ease-out;
 }
 
 p.animated-text {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 2.5rem;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    animation: fadeInSlideScale 1.2s ease-out 0.5s backwards;
-}
-
-#price-about, #price-price, #price-pix {
-    font-weight: bold;
-    color: #FFA07A;
-    text-shadow: 0 2px 4px rgba(255, 160, 122, 0.3);
-    animation: pulsePrice 2s ease-in-out infinite;
-}
-
-.decoration {
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(to right, transparent, #87CEEB, transparent);
-    bottom: -2px;
-    opacity: 0.3;
-    z-index: 1;
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    animation: pulse 4s ease-in-out infinite;
-}
-
-.decoration:hover {
-    opacity: 0.4;
-    transform: scaleX(1.1);
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    animation: fadeInSlide 2s ease-out 0.5s backwards;
 }
 
 /* Seção Benefícios */
 .benefits ul {
     list-style: none;
-    max-width: 750px;
+    max-width: 700px;
     margin: 0 auto;
     text-align: left;
 }
 
 .benefits li.animated-list {
-    padding: 1.4rem;
-    font-size: 1.3rem;
-    color: #333;
-    position: relative;
-    padding-left: 35px;
-    background-color: #F5F5F5;
-    border-radius: 15px;
-    margin-bottom: 2rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-    transition: transform 0.6s ease-out, box-shadow 0.6s ease-out, background-color 0.6s ease-out, opacity 0.6s ease-out;
-    animation: bounceIn 0.8s ease-out forwards;
-    animation-delay: calc(var(--order) * 0.2s);
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    background: #F5F5F5;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    animation: bounceIn 2s ease-out forwards;
 }
 
 .benefits li.animated-list:hover {
     transform: translateX(10px);
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18);
-    background-color: #F0F0F0;
-    opacity: 0.98;
 }
 
-.benefits li.animated-list:before {
-    content: "•";
-    color: #87CEEB;
-    position: absolute;
-    left: 15px;
-    font-size: 1.6rem;
-    transition: color 0.6s ease-out, transform 0.6s ease-out;
-    animation: pulseBullet 2s ease-in-out infinite 1s;
-}
+.benefits li:nth-child(1) { animation-delay: 0.2s; }
+.benefits li:nth-child(2) { animation-delay: 0.4s; }
+.benefits li:nth-child(3) { animation-delay: 0.6s; }
+.benefits li:nth-child(4) { animation-delay: 0.8s; }
+.benefits li:nth-child(5) { animation-delay: 1s; }
+.benefits li:nth-child(6) { animation-delay: 1.2s; }
+.benefits li:nth-child(7) { animation-delay: 1.4s; }
+.benefits li:nth-child(8) { animation-delay: 1.6s; }
+.benefits li:nth-child(9) { animation-delay: 1.8s; }
 
-.benefits li.animated-list:hover:before {
-    color: #FFA07A;
-    transform: scale(1.15) rotate(5deg);
-}
-
-.benefits li.animated-list:nth-child(1) { --order: 1; }
-.benefits li.animated-list:nth-child(2) { --order: 2; }
-.benefits li.animated-list:nth-child(3) { --order: 3; }
-.benefits li.animated-list:nth-child(4) { --order: 4; }
-.benefits li.animated-list:nth-child(5) { --order: 5; }
-.benefits li.animated-list:nth-child(6) { --order: 6; }
-.benefits li.animated-list:nth-child(7) { --order: 7; }
-.benefits li.animated-list:nth-child(8) { --order: 8; }
-.benefits li.animated-list:nth-child(9) { --order: 9; }
-
-/* Seção Preço */
-.price h2.animated-title {
-    margin-bottom: 2rem;
-}
-
-/* Seção Pagamento por Pix */
-.payment-pix {
-    padding: 5rem 0;
+/* Botão de Compra */
+#purchase-section {
     text-align: center;
-    background: linear-gradient(135deg, #FFFFFF, #F5F5F5);
-    position: relative;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.payment-pix h2.animated-title {
-    margin-bottom: 2rem;
-}
-
-.qr-code {
-    margin: 2.5rem 0;
-    padding: 2.2rem;
+    padding: 3rem 0;
     background-color: #F5F5F5;
-    border-radius: 15px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    transition: transform 0.6s ease-out, box-shadow 0.6s ease-out, background-color 0.6s ease-out;
-    animation: bounceIn 1s ease-out;
 }
 
-.qr-code:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    background-color: #F0F0F0;
-}
-
-.qr-image {
-    max-width: 220px;
-    height: auto;
+#buy-button {
+    background-color: #FFA07A;
+    color: #fff;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.5rem;
+    border: none;
     border-radius: 10px;
-    margin-bottom: 1.5rem;
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-    animation: fadeInZoom 1s ease-out;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.qr-image:hover {
-    transform: scale(1.07) rotate(2deg);
-    opacity: 0.98;
-}
-
-.pix-logo {
-    max-width: 100px;
-    height: auto;
-    margin: 1rem auto;
-    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
-    animation: fadeInZoom 1s ease-out 0.5s;
-}
-
-.pix-logo:hover {
-    transform: scale(1.07);
-    opacity: 0.98;
-}
-
-.payment-pix p.animated-text a {
-    color: #87CEEB;
-    text-decoration: underline;
-    transition: color 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.payment-pix p.animated-text a:hover {
-    color: #FFA07A;
-    transform: scale(1.05);
+#buy-button:hover {
+    background-color: #E6956E;
 }
 
 /* Rodapé */
 footer {
     padding: 2rem 0;
     text-align: center;
-    background: #FFFFFF;
-    color: #D3D3D3;
-    border-top: 3px solid #F5F5F5;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    animation: fadeInSlide 1s ease-out;
+    background-color: #87CEEB;
+    color: #fff;
 }
 
 /* Animações */
 @keyframes fadeInSlide {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInSlideRotate {
-    from {
-        opacity: 0;
-        transform: translateY(30px) rotate(-5deg);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) rotate(0);
-    }
-}
-
-@keyframes fadeInSlideScale {
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-@keyframes fadeInZoom {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes bounceIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
-@keyframes pulsePrice {
-    0%, 100% {
-        transform: scale(1);
-        color: #FFA07A;
-    }
-    50% {
-        transform: scale(1.05);
-        color: #E6956E;
-    }
-}
-
-@keyframes pulseBullet {
-    0%, 100% {
-        transform: scale(1) rotate(0);
-        opacity: 0.8;
-    }
-    50% {
-        transform: scale(1.1) rotate(5deg);
-        opacity: 1;
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .hero {
-        padding: 3.5rem 0 2.5rem;
-    }
-
-    .logo {
-        width: 120px;
-        margin: 3rem auto 1rem;
-    }
-
-    .hero h1.animated-title {
-        font-size: 2.4rem;
-    }
-
-    .hero p.animated-subtitle {
-        font-size: 1.2rem;
-    }
-
-    .ebook-cover {
-        max-width: 80%;
-    }
-
-    h2.animated-title {
-        font-size: 2rem;
-    }
-
-    p.animated-text {
-        font-size: 1.1rem;
-    }
-
-    .benefits li.animated-list {
-        font-size: 1.1rem;
-        padding: 1.1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .qr-image, .pix-logo {
-        max-width: 180px;
-    }
-
-    .decoration {
-        height: 2px;
-    }
+    .hero h1.animated-title { font-size: 2rem; }
+    .hero p.animated-subtitle { font-size: 1.1rem; }
+    .logo { width: 150px; }
+    h2.animated-title { font-size: 2rem; }
+    p.animated-text { font-size: 1.1rem; }
+    .benefits li.animated-list { font-size: 1rem; }
+    #buy-button { font-size: 1.2rem; padding: 1rem 2rem; }
 }

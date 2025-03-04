@@ -3,32 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubra Mindfulness Diário: 10 passos simples para transformar sua rotina, reduzir stress e viver com paz por apenas R$ 19,90 (oferta limitada a 15 minutos) via Pix.">
-    <meta name="keywords" content="mindfulness, atenção plena, reduzir stress, bem-estar, vida plena, ebook mindfulness, paz interior, pix, oferta limitada">
-    <meta name="author" content="Vida Plena Mindfulness">
     <title>Mindfulness Diário - Transforme Sua Rotina por R$ 19,90</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="logo-vida-plena.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Seção Hero -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="animated-title">Transforme Sua Rotina com Mindfulness AGORA</h1>
-            <p class="animated-subtitle">Descubra 10 passos simples para viver o momento presente, eliminar stress e encontrar paz profunda com Vida Plena Mindfulness – por apenas <span id="price">R$ 19,90</span>, mas corra, oferta válida por <span id="timer">15:00</span> minutos!</p>
-            <img src="capa-ebook.jpg" alt="Capa do eBook Mindfulness Diário" class="ebook-cover" loading="lazy">
-            <img src="logo-vida-plena.png" alt="Logo Vida Plena Mindfulness" class="logo">
-        </div>
+    <!-- Cabeçalho Fixo com Cronômetro -->
+    <header class="fixed-header">
+        <div class="timer">Oferta válida por: <span id="timer">15:00</span></div>
     </header>
+
+    <!-- Seção Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="logo-vida-plena.png" alt="Logo Vida Plena Mindfulness" class="logo">
+            <h1 class="animated-title">Transforme Sua Rotina com Mindfulness AGORA</h1>
+            <p class="animated-subtitle">Descubra 10 passos simples para viver o momento presente, eliminar stress e encontrar paz profunda com Vida Plena Mindfulness – por apenas R$ <span id="price">19,90</span>!</p>
+            <img src="capa-ebook.jpg" alt="Capa do eBook Mindfulness Diário" class="ebook-cover">
+        </div>
+    </section>
 
     <!-- Seção Sobre o eBook -->
     <section class="about-ebook">
         <div class="container">
             <h2 class="animated-title">Por Que o Mindfulness Diário Vai Mudar Sua Vida?</h2>
-            <p class="animated-text">Mindfulness, ou atenção plena, é a arte de estar totalmente presente no agora, sem julgamentos, para reduzir ansiedade, aumentar o foco e trazer equilíbrio à sua vida – mesmo em meio ao caos diário. Este eBook é o seu guia definitivo, com 10 passos práticos e acessíveis que já transformaram a rotina de milhares na comunidade Vida Plena Mindfulness. Imagine acordar todos os dias mais calmo, consciente e pronto para enfrentar qualquer desafio – por apenas <span id="price-about">R$ 19,90</span> (oferta por tempo limitado)!</p>
+            <p class="animated-text">Mindfulness é a arte de estar presente, reduzindo ansiedade e trazendo equilíbrio. Este eBook traz 10 passos práticos que já transformaram milhares de vidas.</p>
         </div>
-        <div class="decoration"></div>
     </section>
 
     <!-- Seção Benefícios -->
@@ -36,76 +36,37 @@
         <div class="container">
             <h2 class="animated-title">O Que Você Vai Ganhar Hoje</h2>
             <ul>
-                <li class="animated-list">Pausas de 5 minutos para eliminar stress instantaneamente e recarregar suas energias.</li>
-                <li class="animated-list">Técnica 4-7-8 para acalmar a mente em segundos, mesmo nas situações mais tensas.</li>
-                <li class="animated-list">Refeições conscientes para redescobrir o prazer de comer com atenção.</li>
-                <li class="animated-list">Alertas estratégicos para nunca mais viver no "piloto automático" e manter o foco no presente.</li>
-                <li class="animated-list">Meditação de 5 minutos para clareza mental e serenidade imediata.</li>
-                <li class="animated-list">Caminhadas com atenção, sentindo cada passo como paz e conexão interior.</li>
-                <li class="animated-list">Gratidão diária para cultivar positividade e atrair mais alegria.</li>
-                <li class="animated-list">Menos distrações digitais com estratégias práticas para liberar sua mente.</li>
-                <li class="animated-list">Gentileza consigo mesmo para aceitar desafios com paciência e crescer.</li>
+                <li class="animated-list">Pausas de 5 minutos para eliminar stress instantaneamente.</li>
+                <li class="animated-list">Técnica 4-7-8 para acalmar a mente em segundos.</li>
+                <li class="animated-list">Refeições conscientes para redescobrir o prazer.</li>
+                <li class="animated-list">Alertas para sair do piloto automático.</li>
+                <li class="animated-list">Meditação de 5 minutos para clareza mental.</li>
+                <li class="animated-list">Caminhadas com atenção para conexão interior.</li>
+                <li class="animated-list">Gratidão diária para uma vida mais positiva.</li>
+                <li class="animated-list">Menos distrações digitais, mais foco.</li>
+                <li class="animated-list">Gentileza consigo mesmo em cada desafio.</li>
             </ul>
         </div>
-        <div class="decoration"></div>
     </section>
 
     <!-- Seção Preço -->
     <section class="price">
         <div class="container">
-            <h2 class="animated-title">Sua Paz por Apenas <span id="price-price">R$ 19,90</span>!</h2>
-            <p class="animated-text">Aproveite a oferta limitada por apenas <span id="timer-price">15:00</span> minutos para acessar o eBook em PDF com técnicas revolucionárias. Garantia de 7 dias: sem resultados, 100% do seu dinheiro de volta! Após esse tempo, o preço sobe para R$ 27,97 – corra!</p>
+            <h2 class="animated-title">Sua Paz por Apenas R$ <span id="price-price">19,90</span>!</h2>
+            <p class="animated-text">Acesso instantâneo ao eBook em PDF. Garantia de 7 dias: sem resultados, 100% do seu dinheiro de volta!</p>
         </div>
-        <div class="decoration"></div>
     </section>
 
-    <!-- Seção Pagamento por Pix -->
-    <section class="payment-pix">
-        <div class="container">
-            <h2 class="animated-title">Pague com Pix e Receba Seu eBook Agora!</h2>
-            <p class="animated-text">Transforme sua vida hoje por apenas <span id="price-pix">R$ 19,90</span>! Pague via Pix usando a chave abaixo e receba o link de download instantaneamente no seu e-mail. Oferta expira em <span id="timer-pix">15:00</span> minutos – agilize antes que o preço suba para R$ 27,97!</p>
-            <p class="animated-text"><strong>Chave Pix:</strong> vidaplenamindfullness@gmail.com</p>
-            <div class="qr-code">
-                <img src="qr-code-pix.jpg" alt="QR Code Pix" class="qr-image" loading="lazy">
-                <img src="logo-pix.jpg" alt="Logo Pix" class="pix-logo" loading="lazy">
-                <p class="animated-text">Escaneie o QR Code com o app do seu banco ou copie a chave para pagamento. Após a confirmação, envie o comprovante para <a href="mailto:vidaplenamindfullness@gmail.com">vidaplenamindfullness@gmail.com</a> para receber o eBook imediatamente.</p>
-            </div>
-        </div>
-        <div class="decoration"></div>
+    <!-- Botão de Compra -->
+    <section id="purchase-section">
+        <button id="buy-button">Comprar Agora por R$ 19,90</button>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <div class="container">
-            <p>© 2025 Vida Plena Mindfulness. Todos os direitos reservados.</p>
-        </div>
+        <p>© 2025 Vida Plena Mindfulness. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        let timeLeft = 15 * 60;
-        const timerElements = [document.getElementById('timer'), document.getElementById('timer-price'), document.getElementById('timer-pix')];
-        const priceElements = [document.getElementById('price'), document.getElementById('price-about'), document.getElementById('price-price'), document.getElementById('price-pix')];
-
-        function updateTimer() {
-            const minutes = Math.floor(timeLeft / 60);
-            const seconds = timeLeft % 60;
-            const timeStr = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-            timerElements.forEach(el => el.textContent = timeStr);
-
-            if (timeLeft > 0) {
-                timeLeft--;
-                setTimeout(updateTimer, 1000);
-            } else {
-                priceElements.forEach(el => el.textContent = 'R$ 27,97');
-                timerElements.forEach(el => el.textContent = '00:00');
-                document.querySelector('.hero p.animated-subtitle').textContent = 'Descubra 10 passos simples para viver o momento presente, eliminar stress e encontrar paz profunda com Vida Plena Mindfulness – por apenas R$ 27,97, mas corra!';
-                document.querySelector('.about-ebook p.animated-text').innerHTML = 'Mindfulness, ou atenção plena, é a arte de estar totalmente presente no agora, sem julgamentos, para reduzir ansiedade, aumentar o foco e trazer equilíbrio à sua vida – mesmo em meio ao caos diário. Este eBook é o seu guia definitivo, com 10 passos práticos e acessíveis que já transformaram a rotina de milhares na comunidade Vida Plena Mindfulness. Imagine acordar todos os dias mais calmo, consciente e pronto para enfrentar qualquer desafio – por apenas R$ 27,97!';
-                document.querySelector('.price h2.animated-title').innerHTML = 'Sua Paz por Apenas R$ 27,97 – Agilize Agora!';
-                document.querySelector('.price p.animated-text').innerHTML = 'Aproveite a oferta para acessar o eBook em PDF com técnicas revolucionárias. Garantia de 7 dias: sem resultados, 100% do seu dinheiro de volta! Corra por R$ 27,97 antes que suba!';
-                document.querySelector('.payment-pix p.animated-text:nth-child(2)').innerHTML = 'Transforme sua vida hoje por apenas R$ 27,97! Pague via Pix usando a chave abaixo e receba o link de download instantaneamente no seu e-mail. Agilize antes que o preço suba!';
-            }
-        }
-        updateTimer();
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
