@@ -1,0 +1,425 @@
+/* Estilos Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FFFFFF;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container para centralizar conteúdo */
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+/* Seção Hero */
+.hero {
+    background: linear-gradient(180deg, #87CEEB, #F5F5F5);
+    padding: 5rem 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.hero-content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    display: block;
+    margin: 4rem auto 1.5rem;
+    width: 160px;
+    height: auto;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out, scale 0.6s ease-out;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    animation: fadeInSlide 1s ease-out;
+}
+
+.logo:hover {
+    transform: scale(1.08) rotate(2deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+.hero h1.animated-title {
+    font-family: 'Playfair Display', 'Arial', serif;
+    font-size: 3.2rem;
+    color: #FFFFFF;
+    margin-bottom: 1.8rem;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    animation: fadeInSlideRotate 1.5s ease-out;
+}
+
+.hero p.animated-subtitle {
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 3.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    animation: fadeInSlideScale 1.5s ease-out 0.5s backwards;
+}
+
+#price, #timer {
+    font-weight: bold;
+    color: #FFA07A;
+    text-shadow: 0 2px 4px rgba(255, 160, 122, 0.3);
+    animation: pulsePrice 2s ease-in-out infinite;
+}
+
+.ebook-cover {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 3.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+    transition: transform 0.6s ease-out, box-shadow 0.6s ease-out, opacity 0.6s ease-out;
+    animation: fadeInZoom 1s ease-out;
+}
+
+.ebook-cover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    opacity: 0.98;
+}
+
+/* Seções Gerais */
+.about-ebook, .benefits, .price, .payment-pix {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #F5F5F5, #FFFFFF);
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2.animated-title {
+    font-family: 'Playfair Display', 'Arial', serif;
+    font-size: 2.6rem;
+    color: #87CEEB;
+    margin-bottom: 2.2rem;
+    text-shadow: 0 2px 5px rgba(0, 123, 255, 0.15);
+    animation: fadeInSlide 1s ease-out;
+}
+
+p.animated-text {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 2.5rem;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    animation: fadeInSlideScale 1.2s ease-out 0.5s backwards;
+}
+
+#price-about, #price-price, #price-pix {
+    font-weight: bold;
+    color: #FFA07A;
+    text-shadow: 0 2px 4px rgba(255, 160, 122, 0.3);
+    animation: pulsePrice 2s ease-in-out infinite;
+}
+
+.decoration {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #87CEEB, transparent);
+    bottom: -2px;
+    opacity: 0.3;
+    z-index: 1;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+.decoration:hover {
+    opacity: 0.4;
+    transform: scaleX(1.1);
+}
+
+/* Seção Benefícios */
+.benefits ul {
+    list-style: none;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.benefits li.animated-list {
+    padding: 1.4rem;
+    font-size: 1.3rem;
+    color: #333;
+    position: relative;
+    padding-left: 35px;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.6s ease-out, box-shadow 0.6s ease-out, background-color 0.6s ease-out, opacity 0.6s ease-out;
+    animation: bounceIn 0.8s ease-out forwards;
+    animation-delay: calc(var(--order) * 0.2s);
+}
+
+.benefits li.animated-list:hover {
+    transform: translateX(10px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.18);
+    background-color: #F0F0F0;
+    opacity: 0.98;
+}
+
+.benefits li.animated-list:before {
+    content: "•";
+    color: #87CEEB;
+    position: absolute;
+    left: 15px;
+    font-size: 1.6rem;
+    transition: color 0.6s ease-out, transform 0.6s ease-out;
+    animation: pulseBullet 2s ease-in-out infinite 1s;
+}
+
+.benefits li.animated-list:hover:before {
+    color: #FFA07A;
+    transform: scale(1.15) rotate(5deg);
+}
+
+.benefits li.animated-list:nth-child(1) { --order: 1; }
+.benefits li.animated-list:nth-child(2) { --order: 2; }
+.benefits li.animated-list:nth-child(3) { --order: 3; }
+.benefits li.animated-list:nth-child(4) { --order: 4; }
+.benefits li.animated-list:nth-child(5) { --order: 5; }
+.benefits li.animated-list:nth-child(6) { --order: 6; }
+.benefits li.animated-list:nth-child(7) { --order: 7; }
+.benefits li.animated-list:nth-child(8) { --order: 8; }
+.benefits li.animated-list:nth-child(9) { --order: 9; }
+
+/* Seção Preço */
+.price h2.animated-title {
+    margin-bottom: 2rem;
+}
+
+/* Seção Pagamento por Pix */
+.payment-pix {
+    padding: 5rem 0;
+    text-align: center;
+    background: linear-gradient(135deg, #FFFFFF, #F5F5F5);
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.payment-pix h2.animated-title {
+    margin-bottom: 2rem;
+}
+
+.qr-code {
+    margin: 2.5rem 0;
+    padding: 2.2rem;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.6s ease-out, box-shadow 0.6s ease-out, background-color 0.6s ease-out;
+    animation: bounceIn 1s ease-out;
+}
+
+.qr-code:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: #F0F0F0;
+}
+
+.qr-image {
+    max-width: 220px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    animation: fadeInZoom 1s ease-out;
+}
+
+.qr-image:hover {
+    transform: scale(1.07) rotate(2deg);
+    opacity: 0.98;
+}
+
+.pix-logo {
+    max-width: 100px;
+    height: auto;
+    margin: 1rem auto;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    animation: fadeInZoom 1s ease-out 0.5s;
+}
+
+.pix-logo:hover {
+    transform: scale(1.07);
+    opacity: 0.98;
+}
+
+.payment-pix p.animated-text a {
+    color: #87CEEB;
+    text-decoration: underline;
+    transition: color 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.payment-pix p.animated-text a:hover {
+    color: #FFA07A;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    padding: 2rem 0;
+    text-align: center;
+    background: #FFFFFF;
+    color: #D3D3D3;
+    border-top: 3px solid #F5F5F5;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    animation: fadeInSlide 1s ease-out;
+}
+
+/* Animações */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInSlideRotate {
+    from {
+        opacity: 0;
+        transform: translateY(30px) rotate(-5deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
+}
+
+@keyframes fadeInSlideScale {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes pulsePrice {
+    0%, 100% {
+        transform: scale(1);
+        color: #FFA07A;
+    }
+    50% {
+        transform: scale(1.05);
+        color: #E6956E;
+    }
+}
+
+@keyframes pulseBullet {
+    0%, 100% {
+        transform: scale(1) rotate(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.1) rotate(5deg);
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero {
+        padding: 3.5rem 0 2.5rem;
+    }
+
+    .logo {
+        width: 120px;
+        margin: 3rem auto 1rem;
+    }
+
+    .hero h1.animated-title {
+        font-size: 2.4rem;
+    }
+
+    .hero p.animated-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .ebook-cover {
+        max-width: 80%;
+    }
+
+    h2.animated-title {
+        font-size: 2rem;
+    }
+
+    p.animated-text {
+        font-size: 1.1rem;
+    }
+
+    .benefits li.animated-list {
+        font-size: 1.1rem;
+        padding: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .qr-image, .pix-logo {
+        max-width: 180px;
+    }
+
+    .decoration {
+        height: 2px;
+    }
+}
