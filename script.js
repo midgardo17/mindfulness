@@ -1,23 +1,31 @@
-let timeLeft = 15 * 60; // 15 minutos em segundos
-const timerElement = document.getElementById('timer');
-const priceElements = document.querySelectorAll('#price, #price-price');
-
-function updateTimer() {
-    const minutes = Math.floor(timeLeft / 60);
-    const seconds = timeLeft % 60;
-    timerElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
-
-    if (timeLeft > 0) {
-        timeLeft--;
-        setTimeout(updateTimer, 1000);
-    } else {
-        priceElements.forEach(el => el.textContent = '27,97');
-    }
-}
-
-updateTimer();
-
-// Botão de Compra
-document.getElementById('buy-button').addEventListener('click', function() {
-    window.location.href = 'https://www.seusite.com/pagamento'; // Substitua pela URL de pagamento real
+// Menu hamburguer
+document.querySelector(".hamburger").addEventListener("click", () => {
+    document.querySelector(".nav-menu").classList.toggle("active");
 });
+
+// Formulário de contato (exemplo básico com envio para console)
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = {
+        name: this.querySelector('input[type="text"]').value,
+        email: this.querySelector('input[type="email"]').value,
+        message: this.querySelector('textarea').value
+    };
+    console.log('Formulário enviado:', formData);
+    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+    this.reset();
+});
+
+// Carrossel de vídeos (opcional, comentado para manter vídeo único)
+// const videos = document.querySelectorAll('.hero-video');
+// let currentVideo = 0;
+
+// function changeVideo() {
+//     videos[currentVideo].style.display = 'none';
+//     currentVideo = (currentVideo + 1) % videos.length;
+//     videos[currentVideo].style.display = 'block';
+//     setTimeout(changeVideo, 10000); // Troca a cada 10 segundos
+// }
+
+// videos[currentVideo].style.display = 'block';
+// setTimeout(changeVideo, 10000);
